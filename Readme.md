@@ -75,7 +75,16 @@ provider "azurerm" {
 }
 ```
 
-### terraform.tfvars
+### variables.tf
+The following variables can be updated in the file or passed in during the execution of a `terraform plan` or a `terraform apply`
+
+**Example:**
+```
+terraform apply -var="subscription_id=${SUBSCRIPTION_ID}" \
+                -var="client_id=${CLIENT_ID}" \
+                -var="client_secret=${CLIENT_SECRET} \
+                -var="tenant_id=${TENANT_ID}" 
+```
 
 ```hcl tangle:./variables.tf
 
