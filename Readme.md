@@ -80,11 +80,13 @@ The following variables can be updated in the file or passed in during the execu
 
 **Example:**
 ```
-terraform apply -var="subscription_id=${SUBSCRIPTION_ID}" \
-                -var="client_id=${CLIENT_ID}" \
-                -var="client_secret=${CLIENT_SECRET} \
-                -var="tenant_id=${TENANT_ID}" 
-```
+    terraform apply \
+      -var="subscription_id=${ARM_SUBSCRIPTION_ID}" \ 
+      -var="client_id=${ARM_CLIENT_ID}" \  
+      -var="client_secret=${ARM_CLIENT_SECRET}" \ 
+      -var="tenant_id=${ARM_TENANT_ID}" \ 
+      -auto-approve
+ ```
 
 ```hcl tangle:./variables.tf
 
