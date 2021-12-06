@@ -58,9 +58,9 @@ The [provider file](https://registry.terraform.io/providers/hashicorp/aws/latest
 ```hcl tangle:./providers.tf
 terraform {
   required_providers {
-    aws = {
-      source  = "hashicorp/aws"
-      version = "~> 3.0"
+    azurerm = {
+      source = "hashicorp/azurerm"
+      version = "2.88.1"
     }
   }
 }
@@ -80,6 +80,7 @@ The following variables can be updated in the file or passed in during the execu
 
 **Example:**
 ```
+    terraform init
     terraform apply \
       -var="subscription_id=${ARM_SUBSCRIPTION_ID}" \ 
       -var="client_id=${ARM_CLIENT_ID}" \  
